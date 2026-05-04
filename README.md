@@ -27,5 +27,19 @@ Distribuição de Probabilidades: Porcentagem de tempo que cada fila passou em c
 
 Tempos Acumulados: Tempo exato de permanência em cada estado, conforme solicitado no enunciado.
 
+---
 
-O código já vem pré-configurado com a topologia de rede apresentada no trabalho:  FilaConfiguraçãoServidoresCapacidadeChegadas (min..max)Serviço (min..max)Q1G/G/1/∞1Infinita2.0 .. 4.01.0 .. 2.0Q2G/G/2/525—4.0 .. 6.0Q3G/G/2/10210—5.0 .. 15.0Regras de Roteamento:De Q1: 80% para Q2 e 20% para Q3.  De Q2: 30% retorna para Q1, 50% vai para Q3 e 20% sai do sistema.  De Q3: 70% retorna para Q2 e 30% sai do sistema.  Primeira Chegada: Ocorre obrigatoriamente no tempo 2.0. 
+## Cenário de Validação
+
+| Fila | Configuração | Servidores | Capacidade | Chegadas | Serviço |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Q1** | G/G/1/∞ | 1 | Infinita | 2.0 .. 4.0 | 1.0 .. 2.0 |
+| **Q2** | G/G/2/5 | 2 | 5 | — | 4.0 .. 6.0 |
+| **Q3** | G/G/2/10 | 2 | 10 | — | 5.0 .. 15.0 |
+
+### **Regras de Roteamento:**
+*   **De Q1:** 80% para Q2 e 20% para Q3.
+*   **De Q2:** 30% retorna para Q1, 50% vai para Q3 e 20% sai do sistema.
+*   **De Q3:** 70% retorna para Q2 e 30% sai do sistema.
+
+> **Observação:** O primeiro cliente chega obrigatoriamente no tempo **2.0**, conforme exigido pelo enunciado.
